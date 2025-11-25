@@ -64,3 +64,33 @@
 2025-11-24 20:07:48,818 - pipeline_logger - INFO - Successfully truncated old data from analytics_sales.
 2025-11-24 20:07:49,003 - pipeline_logger - INFO - Load SUCCESS: 999 records loaded into 'analytics_sales'.
 2025-11-24 20:07:49,003 - pipeline_logger - INFO - --- Full ELT Pipeline Run COMPLETE ---
+2025-11-25 20:12:24,381 - pipeline_logger - INFO - Starting transformation: Merging and cleaning raw data.
+2025-11-25 20:12:24,392 - pipeline_logger - INFO - Merged DataFrames. Total rows: 8
+2025-11-25 20:12:24,395 - pipeline_logger - INFO - Removed 1 duplicate rows based on 'order_id'.
+2025-11-25 20:12:24,398 - pipeline_logger - INFO - Imputed missing quantities with 1.
+2025-11-25 20:12:24,398 - pipeline_logger - INFO - Imputed missing regions with 'Unknown'.
+2025-11-25 20:12:24,398 - pipeline_logger - INFO - Marked orders with bad foreign keys as 'Invalid Customer'.
+2025-11-25 20:12:24,714 - pipeline_logger - INFO - Starting transformation: Merging and cleaning raw data.
+2025-11-25 20:12:24,716 - pipeline_logger - INFO - Merged DataFrames. Total rows: 8
+2025-11-25 20:12:24,717 - pipeline_logger - INFO - Removed 1 duplicate rows based on 'order_id'.
+2025-11-25 20:12:24,717 - pipeline_logger - INFO - Imputed missing quantities with 1.
+2025-11-25 20:12:24,718 - pipeline_logger - INFO - Imputed missing regions with 'Unknown'.
+2025-11-25 20:12:24,718 - pipeline_logger - INFO - Marked orders with bad foreign keys as 'Invalid Customer'.
+2025-11-25 20:12:24,953 - pipeline_logger - INFO - Starting transformation: Merging and cleaning raw data.
+2025-11-25 20:12:24,955 - pipeline_logger - INFO - Merged DataFrames. Total rows: 8
+2025-11-25 20:12:24,955 - pipeline_logger - INFO - Removed 1 duplicate rows based on 'order_id'.
+2025-11-25 20:12:24,956 - pipeline_logger - INFO - Imputed missing quantities with 1.
+2025-11-25 20:12:24,957 - pipeline_logger - INFO - Imputed missing regions with 'Unknown'.
+2025-11-25 20:12:24,957 - pipeline_logger - INFO - Marked orders with bad foreign keys as 'Invalid Customer'.
+2025-11-25 20:12:25,185 - pipeline_logger - INFO - Starting transformation: Merging and cleaning raw data.
+2025-11-25 20:12:25,187 - pipeline_logger - INFO - Merged DataFrames. Total rows: 8
+2025-11-25 20:12:25,188 - pipeline_logger - INFO - Removed 1 duplicate rows based on 'order_id'.
+2025-11-25 20:12:25,188 - pipeline_logger - INFO - Imputed missing quantities with 1.
+2025-11-25 20:12:25,189 - pipeline_logger - INFO - Imputed missing regions with 'Unknown'.
+2025-11-25 20:12:25,189 - pipeline_logger - INFO - Marked orders with bad foreign keys as 'Invalid Customer'.
+2025-11-25 20:12:25,414 - pipeline_logger - INFO - Starting transformation: Merging and cleaning raw data.
+2025-11-25 20:12:25,416 - pipeline_logger - INFO - Merged DataFrames. Total rows: 8
+2025-11-25 20:12:25,416 - pipeline_logger - INFO - Removed 1 duplicate rows based on 'order_id'.
+2025-11-25 20:12:25,417 - pipeline_logger - INFO - Imputed missing quantities with 1.
+2025-11-25 20:12:25,417 - pipeline_logger - INFO - Imputed missing regions with 'Unknown'.
+2025-11-25 20:12:25,417 - pipeline_logger - INFO - Marked orders with bad foreign keys as 'Invalid Customer'.
