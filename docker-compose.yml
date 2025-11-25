@@ -1,16 +1,12 @@
 services:
-  # This service defines your PostgreSQL database
   db:
     image: postgres:15-alpine
     container_name: ae_postgres_db
     restart: always
     
-    # Map the container port 5432 to the host machine port 5432
-    # This allows your Python code on the host to connect via 'localhost:5432'
     ports:
       - "5434:5432"
       
-    # Define the environment variables the PostgreSQL image needs for setup
     environment:
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
@@ -24,6 +20,5 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data/
 
-# Define the persistent volume
 volumes:
   postgres_data:
