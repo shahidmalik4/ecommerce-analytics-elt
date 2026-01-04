@@ -39,8 +39,6 @@ if not logger.handlers:
     logger.addHandler(console_handler)
     logger.addHandler(file_handler)
 
-
-
 def get_db_engine():
     logger.info("Attempting to connect to PostgreSQL...")
     try:
@@ -52,7 +50,6 @@ def get_db_engine():
     except Exception as e:
         logger.critical(f"Failed to connect to PostgreSQL. Check your .env file and Docker status. Error: {e}")
         raise ConnectionError("Database extraction failed.")
-
 
 def extract_raw_data(engine):
 
@@ -73,7 +70,6 @@ def extract_raw_data(engine):
     except Exception as e:
         logger.critical(f"Extraction failed during SQL query execution. Error: {e}")
         raise RuntimeError("Extraction query failed.")
-
 
 if __name__ == "__main__":
     try:
