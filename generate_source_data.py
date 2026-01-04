@@ -6,11 +6,11 @@ import pandas as pd
 import random
 from datetime import datetime, timedelta
 
-POSTGRES_USER = os.getenv("POSTGRES_USER", "postgres")
-POSTGRES_PASSWORD = os.getenv("POSTGRES_PASSWORD", "postgres")
+POSTGRES_USER = os.getenv("POSTGRES_USER", "admin")
+POSTGRES_PASSWORD = os.getenv("POSTGRES_PASSWORD", "admin")
 POSTGRES_HOST = os.getenv("POSTGRES_HOST", "localhost")
-POSTGRES_DB = os.getenv("POSTGRES_DB", "test_db")
-POSTGRES_PORT = os.getenv("POSTGRES_PORT", "5434")
+POSTGRES_DB = os.getenv("POSTGRES_DB", "warehouse")
+POSTGRES_PORT = os.getenv("POSTGRES_PORT", "5432")
 DATABASE_URL = f"postgresql+psycopg2://{POSTGRES_USER}:{POSTGRES_PASSWORD}@{POSTGRES_HOST}:{POSTGRES_PORT}/{POSTGRES_DB}"
 
 NUM_CUSTOMERS = 100
@@ -118,7 +118,7 @@ def generate_orders(engine, customer_keys):
 
 
 def main():
-    """Main execution function to run the data generation pipeline."""
+
     logging.info("--- Data Source Generation Pipeline Start ---")
     try:
         # Step 1: Initialize DB connection
@@ -136,7 +136,6 @@ def main():
         logging.info("Data generation and loading complete. Raw tables are ready for ELT.")
 
     except ConnectionError as e:
-        # Catches the database connection error raised in create_database_engine
         logging.error(f"Application terminated due to database connection failure: {e}")
     except Exception as e:
         logging.error(f"An unexpected error occurred during execution: {e}")

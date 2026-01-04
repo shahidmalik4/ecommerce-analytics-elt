@@ -4,9 +4,9 @@ pycache/
 *.pyd
 
 venv/
-env/
+#env/
 .venv/
-.env/
+#.env/
 
 .DS_Store
 Thumbs.db

@@ -13,7 +13,7 @@ POSTGRES_HOST = os.getenv("POSTGRES_HOST")
 POSTGRES_DB = os.getenv("POSTGRES_DB")
 POSTGRES_PORT = os.getenv("POSTGRES_PORT")
 
-# Construct the database URL
+
 DATABASE_URL = f"postgresql+psycopg2://{POSTGRES_USER}:{POSTGRES_PASSWORD}@{POSTGRES_HOST}:{POSTGRES_PORT}/{POSTGRES_DB}"
 
 # Create a custom logger named 'pipeline_logger'
@@ -38,11 +38,10 @@ file_handler.setFormatter(formatter)
 if not logger.handlers:
     logger.addHandler(console_handler)
     logger.addHandler(file_handler)
-# --- END ADVANCED LOGGING SETUP ---
+
 
 
 def get_db_engine():
-    """Initializes and returns a SQLAlchemy engine, handling connection errors."""
     logger.info("Attempting to connect to PostgreSQL...")
     try:
         engine = create_engine(DATABASE_URL)
@@ -56,10 +55,7 @@ def get_db_engine():
 
 
 def extract_raw_data(engine):
-    """
-    Extracts data from the raw_customers and raw_orders tables 
-    and returns them as a tuple of Pandas DataFrames.
-    """
+
     logger.info("Starting raw data extraction from database tables.")
     
     query_orders = "SELECT * FROM raw_orders;"
@@ -85,7 +81,7 @@ if __name__ == "__main__":
         orders_df, customers_df = extract_raw_data(db_engine)
         
         logger.info("Extraction successful. DataFrames are loaded into memory.")
-        # Print the head of the dataframes to quickly verify the data quality issues
+        
         print("\n--- Orders DataFrame Head (Check for errors like negative price/nulls) ---")
         print(orders_df.head(10))
         print("\n--- Customers DataFrame Head (Check for null regions) ---")

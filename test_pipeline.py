@@ -30,8 +30,6 @@ def analytics_data(db_engine):
     df = pd.read_sql(query, db_engine)
     return df
 
-# --- Data Quality Tests ---
-
 def test_01_final_table_exists(db_engine):
     """Test that the target table was successfully created/loaded."""
     table_check = text(f"SELECT to_regclass('{TARGET_TABLE}');")

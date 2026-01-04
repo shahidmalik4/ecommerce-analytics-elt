@@ -1,19 +1,7 @@
-# Core Data Handling
 pandas
-numpy
-
-# Database Connectivity (PostgreSQL)
 SQLAlchemy
 psycopg2-binary
-
-# Data Validation
 pydantic
-
-#Faker for generating fake data
 faker
-
-# Testing Framework
 pytest
-
-# Best Practice: Environment Variables (Crucial for storing database credentials securely)
 python-dotenv

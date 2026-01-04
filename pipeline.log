@@ -10,7 +10,7 @@
 2025-11-23 19:48:41,765 - pipeline_logger - INFO - Extracted 1000 records from 'raw_orders'.
 2025-11-23 19:48:41,765 - pipeline_logger - INFO - Extracted 100 records from 'raw_customers'.
 2025-11-23 19:48:41,765 - pipeline_logger - INFO - Extraction successful. DataFrames are loaded into memory.
-2025-11-24 19:43:40,623 - pipeline_logger - INFO - --- Day 3: Transformation Pipeline Start ---
+2025-11-24 19:43:40,623 - pipeline_logger - INFO - --- Transformation Pipeline Start ---
 2025-11-24 19:43:40,624 - pipeline_logger - INFO - Attempting to connect to PostgreSQL...
 2025-11-24 19:43:40,771 - pipeline_logger - INFO - Database connection verified.
 2025-11-24 19:43:40,772 - pipeline_logger - INFO - Starting raw data extraction from database tables.
@@ -25,7 +25,7 @@
 2025-11-24 19:43:40,817 - pipeline_logger - INFO - Completed cleaning and transformation. Proceeding to Pydantic validation.
 2025-11-24 19:43:40,828 - pipeline_logger - INFO - Transformation complete. Final clean rows: 999
 2025-11-24 19:43:40,828 - pipeline_logger - INFO - Transformation successful. Final DataFrame is ready.
-2025-11-24 19:49:43,751 - pipeline_logger - INFO - --- Day 4: Full ELT Pipeline Start (E -> T -> L) ---
+2025-11-24 19:49:43,751 - pipeline_logger - INFO - --- Full ELT Pipeline Start (E -> T -> L) ---
 2025-11-24 19:49:43,751 - pipeline_logger - INFO - Attempting to connect to PostgreSQL...
 2025-11-24 19:49:43,810 - pipeline_logger - INFO - Database connection verified.
 2025-11-24 19:49:43,810 - pipeline_logger - INFO - Starting raw data extraction from database tables.
@@ -46,7 +46,7 @@
 (Background on this error at: https://sqlalche.me/e/20/f405)
 2025-11-24 19:49:44,062 - pipeline_logger - INFO - Load SUCCESS: 999 records loaded into 'analytics_sales'.
 2025-11-24 19:49:44,062 - pipeline_logger - INFO - --- Full ELT Pipeline Run COMPLETE ---
-2025-11-24 20:07:48,697 - pipeline_logger - INFO - --- Day 4: Full ELT Pipeline Start (E -> T -> L) ---
+2025-11-24 20:07:48,697 - pipeline_logger - INFO - --- Full ELT Pipeline Start (E -> T -> L) ---
 2025-11-24 20:07:48,697 - pipeline_logger - INFO - Attempting to connect to PostgreSQL...
 2025-11-24 20:07:48,756 - pipeline_logger - INFO - Database connection verified.
 2025-11-24 20:07:48,756 - pipeline_logger - INFO - Starting raw data extraction from database tables.
