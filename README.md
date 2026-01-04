@@ -82,6 +82,7 @@ This will:
 ```bash
 pytest
 ```
+Tests focus on data correctness, not performance.
 
 
 
