@@ -1,6 +1,6 @@
 # E-commerce Analytics ELT (Learning Project)
 
-This repository is a learning and demonstration project that shows how an ELT / ETL-style analytics pipeline can be built using plain Python, without relying on heavy data engineering frameworks.
+This repository is a learning and demonstration project that shows how a simple ELT / ETL-style analytics pipeline can be built using plain Python, without relying on heavy data engineering frameworks.
 
 It is not production-ready and not intended for real-world deployment.
 
