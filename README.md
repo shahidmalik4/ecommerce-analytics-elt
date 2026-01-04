@@ -43,9 +43,6 @@ The raw data was intentionally seeded with real-world quality issues to test the
 
 ---
 
-### **Setup & Data Ingestion**  
-This phase established the environment, created the raw data source, and implemented the data extraction layer.
-
 ---
 
 ### **Environment and Source Data Generation**
