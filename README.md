@@ -14,8 +14,11 @@ Instead, the goal is to:
 ## What This Project Demonstrates
 
 ✔ Extracting data from a relational database
+
 ✔ Working with messy, imperfect source data
+
 ✔ Cleaning, deduplicating, and transforming data
+
 ✔ Schema validation using Pydantic
 ✔ Simple feature engineering for analytics
 ✔ Loading clean data into an analytics table
@@ -45,10 +48,6 @@ All logic is written in plain Python, intentionally avoiding complex frameworks.
 
 ## Getting Started (Local Setup)
 
-To run this project locally:
-
----
-
 ### **1. Clone the Repository**
 ```bash
 git clone https://github.com/shahidmalik4/ecommerce-analytics-elt.git
@@ -74,6 +73,10 @@ python generate_source_data.py
 ```bash
 python loader.py
 ```
+This will:
+- Extract raw data
+- Clean and validate it
+- Load an analytics-ready table
 
 ### **6. Run Automated Data Validation**
 ```bash
