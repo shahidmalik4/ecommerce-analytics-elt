@@ -66,7 +66,7 @@ docker compose up -d
 python generate_source_data.py
 ```
 
-### **5. Run the Full Pipeline (E → T → L)**
+### **5. Run the Full Pipeline (Extract → Transform → Load)**
 ```bash
 python loader.py
 ```
