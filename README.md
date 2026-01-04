@@ -46,7 +46,7 @@ All logic is written in plain Python, intentionally avoiding complex frameworks.
 ```
 ---
 
-## Getting Started (Local Setup)
+## Usage
 
 ### **1. Clone the Repository**
 ```bash
