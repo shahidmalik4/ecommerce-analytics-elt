@@ -11,7 +11,7 @@ Instead, the goal is to:
 
 ---
 
-What This Project Demonstrates
+## What This Project Demonstrates
 
 ✔ Extracting data from a relational database
 ✔ Working with messy, imperfect source data
@@ -25,6 +25,9 @@ What This Project Demonstrates
 All logic is written in plain Python, intentionally avoiding complex frameworks.
 
 ---
+
+## Project Structure
+
 ```bash
 .
 ├── generate_source_data.py   # Generates fake, messy source data
