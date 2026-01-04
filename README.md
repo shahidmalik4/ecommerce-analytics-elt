@@ -41,46 +41,6 @@ All logic is written in plain Python, intentionally avoiding complex frameworks.
 ├── docker-compose.yml        # Local PostgreSQL setup
 └── README.md
 ```
-
-### **Environment and Source Data Generation**
-
-| File(s)               | Function |
-|----------------------|----------|
-| `docker-compose.yml` | Defines the PostgreSQL service container for a repeatable local database environment.
-| `generate_source_data.py` | Populates `raw_customers` and `raw_orders` with 1,000 intentionally messy records.
-
----
-
-### **Extraction and Observability**
-
-| File(s)       | Function |
-|---------------|----------|
-| `extractor.py` | Performs the Extract (E) step by connecting to PostgreSQL and pulling raw data into Pandas DataFrames.
-| `pipeline.log` | Logs events to both terminal and file for observability.
-
----
-
-### **Transformation and Pydantic Validation (Complete)**
-
-This phase implemented the core data cleaning and quality enforcement layer, addressing all known data issues.
-
-| File(s)       | Function |
-|---------------|----------|
-| `schemas.py`  | Defines the output data structure using a Pydantic `CleanedOrder` model with custom validators.
-| `cleaner.py`  | Merges data, deduplicates records, imputes missing regions, fixes negative prices, derives `total_sale`, and validates each record via Pydantic.
-
----
-
-### **Loading and Automated Testing**
-
-This phase completes the ELT loop by loading the clean data into the final reporting table and running an automated test suite to guarantee data integrity.
-
-| File(s)        | Function |
-|----------------|----------|
-| `loader.py`    | Orchestrates the full E-T-L pipeline and loads validated data into the `analytics_sales` table.
-| `test_pipeline.py` | Runs Pytest checks: no duplicates, no negative values, valid foreign keys, correct row counts.
-| `test_cleaner.py` | Unit Test: Uses Pytest with mock Pandas DataFrames to perform fast, isolated tests on the core logic in cleaner.py, ensuring functions work reliably without database access.
-
 ---
 
 ## Getting Started (Local Setup)
@@ -95,7 +55,10 @@ git clone https://github.com/shahidmalik4/ecommerce-analytics-elt.git
 cd ecommerce-analytics-elt
 ```
 
-### **2. Ensure Docker is Running**
+### **2. Install Requirements**
+```bash
+pip install -r requirements.txt
+```
 
 ### **3. Start the Database**
 ```bash
@@ -112,7 +75,7 @@ python generate_source_data.py
 python loader.py
 ```
 
-### **6. Run Automated Data Validation (QA)**
+### **6. Run Automated Data Validation**
 ```bash
 pytest
 ```
