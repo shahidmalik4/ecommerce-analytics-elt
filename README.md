@@ -30,7 +30,7 @@ All logic is written in plain Python, intentionally avoiding complex frameworks.
 ## Project Structure
 
 ```bash
-ecommerce-analytics-elt/
+python-elt-demo/
 ├── src/
 │   ├── loader.py                  # Loads cleaned data back into the database
 │   ├── cleaner.py                 # Cleans and transforms data
