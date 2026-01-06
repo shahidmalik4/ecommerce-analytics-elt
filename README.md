@@ -73,7 +73,7 @@ python -m src.generate_source_data
 - Always run commands from the project root directory.
 
 
-### **5. Run the Full Pipeline (Extract → Transform → Load)**
+### **5. Run the Full Pipeline**
 ```bash
 python -m src.loader
 ```
