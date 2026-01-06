@@ -50,8 +50,8 @@ python-elt-demo/
 
 ### **1. Clone the Repository**
 ```bash
-git clone https://github.com/shahidmalik4/ecommerce-analytics-elt.git
-cd ecommerce-analytics-elt
+git clone https://github.com/shahidmalik4/python-elt-demo.git
+cd python-elt-demo
 ```
 
 ### **2. Install Requirements**
