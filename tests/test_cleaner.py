@@ -12,7 +12,6 @@ if not logger.handlers:
     logger = logging.getLogger(__name__)
 
 def clean_and_transform(df_orders: pd.DataFrame, df_customers: pd.DataFrame) -> pd.DataFrame:
-
     logger.info("Starting transformation: Merging and cleaning raw data.")
 
     df_merged = pd.merge(
